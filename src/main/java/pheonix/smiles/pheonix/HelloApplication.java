@@ -20,11 +20,12 @@ public class HelloApplication extends Application
 
         BorderPane borderPane = new BorderPane();
         Button button = new Button("Click me");
-        BorderPane.setCenter(button);
+        Scene scene = new Scene(borderPane);
+        borderPane.setCenter(button);
         button.setOnAction(this);
 
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Login Page");
+
+        stage.setTitle("Hello");
         stage.setScene(scene);
         stage.show();
     }
