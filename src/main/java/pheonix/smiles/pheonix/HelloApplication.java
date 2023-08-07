@@ -22,7 +22,13 @@ public class HelloApplication extends Application
         Button button = new Button("Click me");
         Scene scene = new Scene(borderPane);
         borderPane.setCenter(button);
-        button.setOnAction(this);
+        button.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                System.out.println("Hello!!");
+
+            }
+        });
 
 
         stage.setTitle("Hello");
