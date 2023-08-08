@@ -26,10 +26,11 @@ class Student implements Person{
 public class AnnonymusInnerClassDemo {
 
     public static void main(String[] args) {
-        Person person = new Person();
-        public void greet(){
-            System.out.println("Namaste");
-        }
-        person.greet();
+        Person person = new Person() {
+            public void greet() {
+                System.out.println("Namaste");
+            }
+
+        };
     }
 }

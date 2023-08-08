@@ -20,14 +20,17 @@ public class HelloApplication extends Application
 
         BorderPane borderPane = new BorderPane();
         Button button = new Button("Click me");
+        Button button2 = new Button("Click me2");
         Scene scene = new Scene(borderPane);
         borderPane.setCenter(button);
+        borderPane.setBottom(button2);
         button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 System.out.println("Hello!!");
 
             }
+
         });
 
 
